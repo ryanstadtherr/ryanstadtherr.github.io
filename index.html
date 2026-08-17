@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Stadtherr | Engineering Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7f9;
+      color: #17212b;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #0b1f33;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .name {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #0b1f33;
+      color: white;
+      padding: 100px 8% 110px;
+    }
+
+    header h1 {
+      font-size: 54px;
+      margin-bottom: 12px;
+    }
+
+    header h2 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 700px;
+      font-size: 18px;
+      color: #d9e3ec;
+    }
+
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 75px 30px;
+    }
+
+    h2.section-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .about {
+      max-width: 850px;
+      font-size: 18px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .project h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .project .tags {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #49657d;
+    }
+
+    .project p {
+      margin-bottom: 20px;
+    }
+
+    .project a {
+      color: #0b5fa5;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .contact {
+      background: #0b1f33;
+      color: white;
+      text-align: center;
+      max-width: none;
+    }
+
+    .contact h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact a {
+      color: white;
+      margin: 0 12px;
+    }
+
+    footer {
+      background: #071522;
+      color: #aab7c3;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 40px;
+      }
+
+      nav .links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="name">Ryan Stadtherr</div>
+
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Ryan Stadtherr</h1>
+  <h2>Aerospace Engineering Student</h2>
+
+  <p>
+    Designing, building, and testing aerospace systems through hands-on
+    engineering, experimentation, and problem solving.
+  </p>
+</header>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+
+  <p class="about">
+    I am an Aerospace Engineering student at San Diego State University
+    with a minor in Computer Science. I am passionate about aircraft,
+    mechanical systems, prototyping, and hands-on engineering. My projects
+    allow me to take ideas from initial design through fabrication,
+    integration, and physical testing.
+  </p>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Featured Projects</h2>
+
+  <div class="projects">
+
+    <div class="project">
+      <h3>DIY Low-Speed Wind Tunnel</h3>
+      <div class="tags">
+        Mechanical Design • Fabrication • Testing • Flow Visualization
+      </div>
+
+      <p>
+        Designed and built a modular low-speed wind tunnel to study external
+        aerodynamics. Developed flow-conditioning and smoke-visualization
+        systems while balancing performance, manufacturability, and cost.
+      </p>
+
+      <a href="#">View Project →</a>
+    </div>
+
+    <div class="project">
+      <h3>Unmanned Aerial Vehicle Research</h3>
+      <div class="tags">
+        CAD • Hardware Integration • 3D Printing • Testing
+      </div>
+
+      <p>
+        Contributing to the development of a scalable UAV research platform.
+        Designed, fabricated, and tested components and built a subsystem
+        enabling controlled motion through mechanical and electrical
+        integration.
+      </p>
+
+      <a href="#">View Project →</a>
+    </div>
+
+    <div class="project">
+      <h3>Aztec Aerospace Design Build Fly</h3>
+      <div class="tags">
+        Aircraft Design • SolidWorks • XFLR5 • Propulsion
+      </div>
+
+      <p>
+        Evaluating airfoils, propeller configurations, and motor performance
+        to support the development of an efficient competition aircraft.
+      </p>
+
+      <a href="#">View Project →</a>
+    </div>
+
+    <div class="project">
+      <h3>Rocket Design and Launch</h3>
+      <div class="tags">
+        Propulsion • SolidWorks • Aerospace Systems
+      </div>
+
+      <p>
+        Supporting rocket propulsion development through CAD modeling and
+        propulsion research as part of SDSU's Rocket Design and Launch Team.
+      </p>
+
+      <a href="#">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Engineering Skills</h2>
+
+  <div class="skills">
+    <div class="skill">SolidWorks</div>
+    <div class="skill">MATLAB</div>
+    <div class="skill">Python</div>
+    <div class="skill">XFLR5</div>
+    <div class="skill">CAD Modeling</div>
+    <div class="skill">3D Printing</div>
+    <div class="skill">Soldering</div>
+    <div class="skill">Hardware Integration</div>
+    <div class="skill">Prototype Testing</div>
+    <div class="skill">Component Selection</div>
+    <div class="skill">Data Analysis</div>
+    <div class="skill">Technical Documentation</div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let's Connect</h2>
+
+  <p>
+    Interested in my work or want to discuss an engineering opportunity?
+  </p>
+
+  <br>
+
+  <a href="mailto:ryanstadtherr@gmail.com">Email</a>
+
+  <a href="https://www.linkedin.com/in/ryan-stadtherr">
+    LinkedIn
+  </a>
+</section>
+
+<footer>
+  © 2026 Ryan Stadtherr | Aerospace Engineering Portfolio
+</footer>
+
+</body>
+</html>
