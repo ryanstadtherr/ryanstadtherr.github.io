@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Ryan Stadtherr | Aerospace Engineering Portfolio</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -19,6 +27,9 @@
       color: #17212b;
       line-height: 1.6;
     }
+
+
+    /* NAVIGATION */
 
     nav {
       background: #0b1f33;
@@ -42,51 +53,166 @@
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #8fc5f4;
     }
+
+
+    /* HERO */
 
     header {
       background: #0b1f33;
       color: white;
-      padding: 100px 8% 110px;
+      padding: 65px 8% 75px;
+    }
+
+    .hero-container {
+      max-width: 1150px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-label {
+      color: #83b9e5;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      margin-bottom: 12px;
     }
 
     header h1 {
-      font-size: 54px;
+      font-size: 56px;
+      line-height: 1.08;
       margin-bottom: 12px;
     }
 
     header h2 {
-      font-size: 24px;
+      font-size: 25px;
       font-weight: normal;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      color: #dce8f2;
     }
 
     header p {
-      max-width: 700px;
+      max-width: 680px;
       font-size: 18px;
       color: #d9e3ec;
     }
 
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      background: white;
+      color: #0b1f33;
+      padding: 11px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-button.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid #6e879e;
+    }
+
+
+    /* HERO FOCUS PANEL */
+
+    .hero-focus {
+      border-left: 1px solid #385269;
+      padding-left: 38px;
+    }
+
+    .hero-focus h3 {
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .focus-item {
+      margin-bottom: 17px;
+    }
+
+    .focus-item strong {
+      display: block;
+      font-size: 14px;
+      color: white;
+      margin-bottom: 3px;
+    }
+
+    .focus-item span {
+      color: #aebfce;
+      font-size: 14px;
+    }
+
+
+    /* GENERAL SECTIONS */
+
     section {
       max-width: 1150px;
       margin: auto;
-      padding: 75px 30px;
+      padding: 70px 30px;
     }
 
     h2.section-title {
       font-size: 32px;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
+
+    /* ABOUT */
+
     .about {
-      max-width: 850px;
+      max-width: 880px;
       font-size: 18px;
     }
 
+    .about-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: white;
+      padding: 13px 18px;
+      border-radius: 7px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .stat strong {
+      display: block;
+      color: #0b1f33;
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: #607486;
+    }
+
+
+    /* PROJECT GRID */
+
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 28px;
     }
 
@@ -94,8 +220,15 @@
       background: white;
       border-radius: 10px;
       overflow: hidden;
+
       box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+      display: flex;
+      flex-direction: column;
     }
 
     .project:hover {
@@ -108,19 +241,24 @@
       height: 230px;
       object-fit: cover;
       display: block;
+      background: #e9edf1;
     }
 
     .project-content {
-      padding: 28px;
+      padding: 27px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .project h3 {
       font-size: 22px;
+      line-height: 1.25;
       margin-bottom: 10px;
     }
 
     .project .tags {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: bold;
       margin-bottom: 15px;
       color: #49657d;
@@ -128,25 +266,41 @@
 
     .project p {
       margin-bottom: 20px;
+      font-size: 15px;
     }
 
     .project a {
       color: #0b5fa5;
       font-weight: bold;
       text-decoration: none;
+      margin-top: auto;
     }
 
     .project a:hover {
       text-decoration: underline;
     }
 
+
+    /* FEATURED WIND TUNNEL */
+
     .project.featured {
       grid-column: span 2;
     }
 
     .project.featured .project-image {
-      height: 360px;
+      height: 350px;
     }
+
+    .project.featured h3 {
+      font-size: 25px;
+    }
+
+    .project.featured p {
+      font-size: 16px;
+    }
+
+
+    /* SKILLS */
 
     .skills {
       display: flex;
@@ -161,6 +315,9 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
+
+    /* CONTACT */
+
     .contact {
       background: #0b1f33;
       color: white;
@@ -172,10 +329,17 @@
       margin-bottom: 15px;
     }
 
+    .contact p {
+      color: #d9e3ec;
+    }
+
     .contact a {
       color: white;
       margin: 0 12px;
     }
+
+
+    /* FOOTER */
 
     footer {
       background: #071522;
@@ -185,13 +349,65 @@
       font-size: 14px;
     }
 
+
+    /* TABLET */
+
+    @media (max-width: 950px) {
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-focus {
+        border-left: none;
+        border-top: 1px solid #385269;
+        padding-left: 0;
+        padding-top: 25px;
+      }
+
+      .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project.featured {
+        grid-column: span 2;
+      }
+
+    }
+
+
+    /* MOBILE */
+
     @media (max-width: 700px) {
+
+      header {
+        padding: 55px 7% 60px;
+      }
+
       header h1 {
-        font-size: 40px;
+        font-size: 41px;
+      }
+
+      header h2 {
+        font-size: 21px;
+      }
+
+      nav {
+        padding-left: 6%;
+        padding-right: 6%;
       }
 
       nav .links {
         display: none;
+      }
+
+      section {
+        padding: 55px 22px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
       }
 
       .project.featured {
@@ -201,54 +417,259 @@
       .project.featured .project-image {
         height: 230px;
       }
+
+      .project-image {
+        height: 230px;
+      }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-  <div class="name">Ryan Stadtherr</div>
+
+  <div class="name">
+    Ryan Stadtherr
+  </div>
 
   <div class="links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+
+    <a href="#about">
+      About
+    </a>
+
+    <a href="#projects">
+      Projects
+    </a>
+
+    <a href="#skills">
+      Skills
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
   </div>
+
 </nav>
 
 
+
+<!-- HERO -->
+
 <header>
-  <h1>Ryan Stadtherr</h1>
 
-  <h2>Aerospace Engineering Student</h2>
+  <div class="hero-container">
 
-  <p>
-    Designing, building, and testing aerospace systems through hands-on
-    engineering, experimentation, and problem solving.
-  </p>
+
+    <div>
+
+      <div class="hero-label">
+        Aerospace Engineering Portfolio
+      </div>
+
+      <h1>
+        Ryan Stadtherr
+      </h1>
+
+      <h2>
+        Aerospace Engineering Student
+      </h2>
+
+      <p>
+        Designing, building, testing, troubleshooting, and improving
+        aerospace and mechanical systems through hands-on engineering
+        and experimentation.
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          class="hero-button"
+          href="#projects"
+        >
+          View Projects
+        </a>
+
+        <a
+          class="hero-button secondary"
+          href="#contact"
+        >
+          Contact Me
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-focus">
+
+      <h3>
+        Engineering Focus
+      </h3>
+
+
+      <div class="focus-item">
+
+        <strong>
+          Mechanical Design
+        </strong>
+
+        <span>
+          CAD, mechanisms, assemblies, and component design
+        </span>
+
+      </div>
+
+
+      <div class="focus-item">
+
+        <strong>
+          Build & Integration
+        </strong>
+
+        <span>
+          Fabrication, 3D printing, soldering, and hardware integration
+        </span>
+
+      </div>
+
+
+      <div class="focus-item">
+
+        <strong>
+          Testing & Iteration
+        </strong>
+
+        <span>
+          Prototype testing, troubleshooting, and design improvement
+        </span>
+
+      </div>
+
+
+      <div class="focus-item">
+
+        <strong>
+          Aerospace Systems
+        </strong>
+
+        <span>
+          UAVs, aerodynamics, propulsion, and experimental hardware
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
 </header>
 
 
+
+<!-- ABOUT -->
+
 <section id="about">
 
-  <h2 class="section-title">About Me</h2>
+  <h2 class="section-title">
+    About Me
+  </h2>
 
   <p class="about">
+
     I am an Aerospace Engineering student at San Diego State University
-    with a minor in Computer Science. I am passionate about aircraft,
-    mechanical systems, prototyping, and hands-on engineering. My projects
-    allow me to take ideas from initial design through fabrication,
-    integration, and physical testing.
+    with a minor in Computer Science.
+
+    I am especially interested in aircraft, aerospace systems,
+    mechanical design, prototyping, testing, and hardware integration.
+
+    My projects focus on taking engineering ideas from initial design
+    through fabrication, assembly, testing, troubleshooting, and
+    iterative improvement.
+
   </p>
+
+
+  <div class="about-stats">
+
+    <div class="stat">
+
+      <strong>
+        SDSU
+      </strong>
+
+      <span>
+        Aerospace Engineering
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        Computer Science
+      </strong>
+
+      <span>
+        Minor
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        May 2029
+      </strong>
+
+      <span>
+        Expected Graduation
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        4.0 GPA
+      </strong>
+
+      <span>
+        Academic Performance
+      </span>
+
+    </div>
+
+  </div>
 
 </section>
 
 
+
+<!-- PROJECTS -->
+
 <section id="projects">
 
-  <h2 class="section-title">Featured Projects</h2>
+  <h2 class="section-title">
+    Featured Projects
+  </h2>
+
 
   <div class="projects">
 
@@ -260,29 +681,47 @@
       <img
         class="project-image"
         src="Images/Wind%20Tunnel/IMG_3387.jpg"
-        alt="DIY low-speed wind tunnel"
+        alt="DIY low-speed wind tunnel smoke-flow visualization testing"
       >
+
 
       <div class="project-content">
 
-        <h3>DIY Low-Speed Wind Tunnel</h3>
+        <h3>
+          DIY Low-Speed Wind Tunnel
+        </h3>
+
 
         <div class="tags">
-          Mechanical Design • Fabrication • Testing • Flow Visualization
+
+          Mechanical Design • Fabrication • Experimental Testing •
+          Aerodynamics • Flow Visualization • Troubleshooting
+
         </div>
 
+
         <p>
-          Designed and built a modular low-speed wind tunnel to study
-          external aerodynamics. Developed flow-conditioning and
-          smoke-visualization systems while balancing aerodynamic
-          performance, manufacturability, and cost.
+
+          Designed and fabricated a modular low-speed wind tunnel for
+          qualitative aerodynamic testing and smoke-flow visualization.
+
+          The system integrates flow conditioning, a contraction section,
+          transparent test section, custom multi-port smoke rake, and
+          variable-speed induced airflow.
+
         </p>
 
-        <a href="wind-tunnel.html">View Project →</a>
+
+        <a href="wind-tunnel.html">
+
+          View Project →
+
+        </a>
 
       </div>
 
     </div>
+
 
 
     <!-- UAV RESEARCH -->
@@ -292,29 +731,46 @@
       <img
         class="project-image"
         src="Images/UAv%20Research/MDR%20drone%20with%20mount.png"
-        alt="UAV research platform with mechanical mount"
+        alt="Custom UAV research platform and mechanical mount"
       >
+
 
       <div class="project-content">
 
-        <h3>Unmanned Aerial Vehicle Research</h3>
+        <h3>
+          Unmanned Aerial Vehicle Research
+        </h3>
+
 
         <div class="tags">
-          CAD • Hardware Integration • 3D Printing • Testing
+
+          Mechanical Design • SolidWorks • 3D Printing •
+          Hardware Integration • Soldering • Testing
+
         </div>
 
+
         <p>
-          Contributing to the development of a scalable UAV research
-          platform through mechanical design, 3D printing, component
-          selection, hardware integration, soldering, wiring, and physical
-          testing.
+
+          Developing and integrating custom UAV hardware through mechanical
+          design, 3D printing, soldering, wiring, and physical testing.
+
+          Current work includes a controlled-motion test subsystem and a
+          vertical thrust stand using linear bearings and guide rods.
+
         </p>
 
-        <a href="uav-research.html">View Project →</a>
+
+        <a href="uav-research.html">
+
+          View Project →
+
+        </a>
 
       </div>
 
     </div>
+
 
 
     <!-- LANDING GEAR -->
@@ -327,27 +783,44 @@
         alt="Retractable UAV landing gear assembly designed in SolidWorks"
       >
 
+
       <div class="project-content">
 
-        <h3>Retractable UAV Landing Gear</h3>
+        <h3>
+          Retractable UAV Landing Gear
+        </h3>
+
 
         <div class="tags">
-          SolidWorks • Mechanical Design • Mechanisms • Engineering Drawings
+
+          SolidWorks • Mechanical Design • Mechanisms •
+          Engineering Drawings • Assembly Design
+
         </div>
 
+
         <p>
+
           Designed and modeled a retractable UAV landing gear mechanism
           incorporating a linear actuator, linkage-driven retraction system,
-          shock-absorbing strut, and pinned mechanical joints. The final
-          design included custom components, off-the-shelf hardware,
-          engineering drawings, a BOM, and exploded assembly views.
+          shock-absorbing strut, and pinned mechanical joints.
+
+          The final assembly includes custom components, off-the-shelf
+          hardware, engineering drawings, a BOM, and exploded views.
+
         </p>
 
-        <a href="landing-gear.html">View Project →</a>
+
+        <a href="landing-gear.html">
+
+          View Project →
+
+        </a>
 
       </div>
 
     </div>
+
 
 
     <!-- AAD -->
@@ -360,25 +833,40 @@
         alt="Aztec Aerospace propulsion thrust test stand"
       >
 
+
       <div class="project-content">
 
-        <h3>Aztec Aerospace Design Build Fly</h3>
+        <h3>
+          Aztec Aerospace Design Build Fly
+        </h3>
+
 
         <div class="tags">
-          Aircraft Design • SolidWorks • XFLR5 • Propulsion
+
+          Aircraft Design • Propulsion • SolidWorks • XFLR5 • eCalc
+
         </div>
 
+
         <p>
-          Evaluating airfoils, propeller configurations, motor performance,
-          and propulsion characteristics to support development of an
-          efficient competition aircraft.
+
+          Supporting competition aircraft development through airfoil
+          evaluation, propulsion-system analysis, propeller sizing,
+          motor-performance evaluation, and physical thrust testing.
+
         </p>
 
-        <a href="aad.html">View Project →</a>
+
+        <a href="aad.html">
+
+          View Project →
+
+        </a>
 
       </div>
 
     </div>
+
 
 
     <!-- ROCKET -->
@@ -391,21 +879,37 @@
         alt="SDSU Rocket Design and Launch Team rocket"
       >
 
+
       <div class="project-content">
 
-        <h3>Rocket Design and Launch</h3>
+        <h3>
+          Rocket Design and Launch
+        </h3>
+
 
         <div class="tags">
-          Propulsion • SolidWorks • Aerospace Systems
+
+          Propulsion • SolidWorks • Mechanical Modeling • Aerospace Systems
+
         </div>
 
+
         <p>
-          Supporting rocket propulsion development through CAD modeling
-          of engine components and propulsion research as part of SDSU's
-          Rocket Design and Launch Team.
+
+          Supporting SDSU rocket propulsion development through SolidWorks
+          modeling of engine components and propulsion research.
+
+          Contributed to the Tezcatlipoca rocket project, which achieved a
+          35,604.4-foot launch.
+
         </p>
 
-        <a href="rocket.html">View Project →</a>
+
+        <a href="rocket.html">
+
+          View Project →
+
+        </a>
 
       </div>
 
@@ -417,61 +921,145 @@
 </section>
 
 
+
+<!-- SKILLS -->
+
 <section id="skills">
 
-  <h2 class="section-title">Engineering Skills</h2>
+  <h2 class="section-title">
+    Engineering Skills
+  </h2>
+
 
   <div class="skills">
 
-    <div class="skill">SolidWorks</div>
-    <div class="skill">CAD Modeling</div>
-    <div class="skill">MATLAB</div>
-    <div class="skill">Python</div>
-    <div class="skill">XFLR5</div>
-    <div class="skill">eCalc</div>
-    <div class="skill">3D Printing</div>
-    <div class="skill">Soldering</div>
-    <div class="skill">Hardware Integration</div>
-    <div class="skill">Prototype Testing</div>
-    <div class="skill">Component Selection</div>
-    <div class="skill">Systems Engineering</div>
-    <div class="skill">Data Analysis</div>
-    <div class="skill">Engineering Drawings</div>
-    <div class="skill">Technical Documentation</div>
+    <div class="skill">
+      SolidWorks
+    </div>
+
+    <div class="skill">
+      Mechanical Design
+    </div>
+
+    <div class="skill">
+      CAD Modeling
+    </div>
+
+    <div class="skill">
+      MATLAB
+    </div>
+
+    <div class="skill">
+      Python
+    </div>
+
+    <div class="skill">
+      XFLR5
+    </div>
+
+    <div class="skill">
+      eCalc
+    </div>
+
+    <div class="skill">
+      3D Printing
+    </div>
+
+    <div class="skill">
+      Soldering
+    </div>
+
+    <div class="skill">
+      Hardware Integration
+    </div>
+
+    <div class="skill">
+      Prototype Testing
+    </div>
+
+    <div class="skill">
+      Troubleshooting
+    </div>
+
+    <div class="skill">
+      Component Selection
+    </div>
+
+    <div class="skill">
+      Systems Engineering
+    </div>
+
+    <div class="skill">
+      Data Analysis
+    </div>
+
+    <div class="skill">
+      Engineering Drawings
+    </div>
+
+    <div class="skill">
+      Technical Documentation
+    </div>
 
   </div>
 
 </section>
 
 
-<section id="contact" class="contact">
 
-  <h2>Let's Connect</h2>
+<!-- CONTACT -->
+
+<section
+  id="contact"
+  class="contact"
+>
+
+  <h2>
+    Let's Connect
+  </h2>
+
 
   <p>
+
     Interested in my work or want to discuss an engineering opportunity?
+
   </p>
+
 
   <br>
 
+
   <a href="mailto:ryanstadtherr@gmail.com">
+
     Email
+
   </a>
+
 
   <a
     href="https://www.linkedin.com/in/ryan-stadtherr"
     target="_blank"
     rel="noopener noreferrer"
   >
+
     LinkedIn
+
   </a>
+
 
 </section>
 
 
+
+<!-- FOOTER -->
+
 <footer>
+
   © 2026 Ryan Stadtherr | Aerospace Engineering Portfolio
+
 </footer>
 
+
 </body>
+
 </html>
