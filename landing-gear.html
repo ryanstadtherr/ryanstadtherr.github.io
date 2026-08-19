@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retractable UAV Landing Gear | Ryan Stadtherr</title>
+  
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f9;
+    color: #17212b;
+    line-height: 1.65;
+  }
+  nav {
+    background: #0b1f33;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav .name { color: white; font-size: 20px; font-weight: bold; }
+  nav a { color: white; text-decoration: none; margin-left: 24px; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+
+  .hero {
+    background: #0b1f33;
+    color: white;
+    padding: 75px 8% 80px;
+  }
+  .hero .eyebrow {
+    color: #9fc3e6;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.08;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    max-width: 820px;
+    font-size: 18px;
+    color: #d9e3ec;
+  }
+
+  main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 30px 85px;
+  }
+
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 35px;
+  }
+  .tag {
+    background: white;
+    border-radius: 6px;
+    padding: 9px 13px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    font-size: 14px;
+    color: #49657d;
+    font-weight: bold;
+  }
+
+  .section {
+    margin-top: 55px;
+  }
+  .section h2 {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  .section p {
+    max-width: 900px;
+    margin-bottom: 16px;
+    font-size: 17px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    background: white;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 24px;
+  }
+  .gallery figure {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  }
+  .gallery img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    background: white;
+  }
+  .gallery figcaption {
+    padding: 14px 16px 17px;
+    font-size: 14px;
+    color: #49657d;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 55px;
+    color: #0b5fa5;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  footer {
+    background: #071522;
+    color: #aab7c3;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 750px) {
+    nav .links { display: none; }
+    .gallery { grid-template-columns: 1fr; }
+    .gallery img { height: 260px; }
+    .hero { padding-top: 58px; }
+  }
+</style>
+
+</head>
+<body>
+
+<nav>
+  <div class="name">Ryan Stadtherr</div>
+  <div class="links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Mechanical Design Project</div>
+  <h1>Retractable UAV Landing Gear</h1>
+  <p>A retractable UAV landing gear mechanism modeled in SolidWorks with a linear actuator, linkage-driven retraction, shock-absorbing strut, and pinned mechanical joints.</p>
+</header>
+
+<main>
+  <div class="project-meta">
+    <div class="tag">SolidWorks</div>
+<div class="tag">Mechanical Design</div>
+<div class="tag">Mechanisms</div>
+<div class="tag">Engineering Drawings</div>
+<div class="tag">BOM</div>
+<div class="tag">Assembly Design</div>
+  </div>
+
+  <img class="hero-image" src="Images/Landing%20gear/Landing%20gear%20assembly.png" alt="Retractable UAV landing gear assembly modeled in SolidWorks">
+
+  <section class="section"><h2>Overview</h2><p>I designed and modeled a retractable UAV landing gear mechanism in SolidWorks with an emphasis on practical mechanical design, simplified motion, lightweight construction, and manufacturability.</p></section>
+<section class="section"><h2>Mechanism Design</h2><p>The assembly uses a linear actuator and linkage-driven retraction system together with pinned joints and a shock-absorbing strut. The geometry was developed to provide the required motion while keeping the design mechanically simple.</p></section>
+<section class="section"><h2>Design for Assembly</h2><p>The final assembly combines custom-modeled parts with off-the-shelf hardware. Component geometry, fastener placement, joint motion, and assembly access were considered throughout the design.</p></section>
+<section class="section"><h2>Documentation</h2><p>The project includes detailed engineering drawings, a bill of materials, exploded views, and collapsed/retracted assembly views to communicate how the mechanism is built and how it moves.</p></section>
+
+  <section class="section">
+    <h2>Project Gallery</h2>
+    <div class="gallery">
+      <figure>
+  <img src="Images/Landing%20gear/Landing%20gear%20exploded%20view.png" alt="Exploded landing gear assembly">
+  <figcaption>Exploded assembly showing the relationship between major components.</figcaption>
+</figure>
+<figure>
+  <img src="Images/Landing%20gear/Screenshot%202026-04-24%20194155.png" alt="Landing gear CAD development">
+  <figcaption>CAD development view from the design process.</figcaption>
+</figure>
+<figure>
+  <img src="Images/Landing%20gear/Screenshot%202026-04-26%20144636.png" alt="Landing gear linkage development">
+  <figcaption>Linkage and joint development during the design process.</figcaption>
+</figure>
+<figure>
+  <img src="Images/Landing%20gear/Screenshot%202026-04-26%20182550.png" alt="Landing gear assembly iteration">
+  <figcaption>Assembly iteration used to evaluate fit and motion.</figcaption>
+</figure>
+<figure>
+  <img src="Images/Landing%20gear/Screenshot%202026-04-27%20112419.png" alt="Landing gear mechanism view">
+  <figcaption>Mechanism view showing the retraction arrangement.</figcaption>
+</figure>
+<figure>
+  <img src="Images/Landing%20gear/Screenshot%202026-04-27%20115031.png" alt="Landing gear mechanical design">
+  <figcaption>Additional CAD view from the assembly design process.</figcaption>
+</figure>
+<figure>
+  <img src="Images/Landing%20gear/Screenshot%202026-04-28%20071148.png" alt="Landing gear final design view">
+  <figcaption>Later-stage CAD view of the retractable landing gear.</figcaption>
+</figure>
+    </div>
+  </section>
+
+  <a class="back-link" href="index.html#projects">← Back to Featured Projects</a>
+</main>
+
+<footer>
+  © 2026 Ryan Stadtherr | Aerospace Engineering Portfolio
+</footer>
+
+</body>
+</html>
