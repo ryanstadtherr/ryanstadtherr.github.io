@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ryan Stadtherr | Engineering Portfolio</title>
+
+  <title>Ryan Stadtherr | Aerospace Engineering Portfolio</title>
 
   <style>
     * {
@@ -85,15 +86,32 @@
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
     }
 
     .project {
       background: white;
       border-radius: 10px;
-      padding: 30px;
+      overflow: hidden;
       box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-content {
+      padding: 28px;
     }
 
     .project h3 {
@@ -120,6 +138,14 @@
 
     .project a:hover {
       text-decoration: underline;
+    }
+
+    .project.featured {
+      grid-column: span 2;
+    }
+
+    .project.featured .project-image {
+      height: 360px;
     }
 
     .skills {
@@ -167,6 +193,14 @@
       nav .links {
         display: none;
       }
+
+      .project.featured {
+        grid-column: span 1;
+      }
+
+      .project.featured .project-image {
+        height: 230px;
+      }
     }
   </style>
 </head>
@@ -184,17 +218,23 @@
   </div>
 </nav>
 
+
 <header>
+
   <h1>Ryan Stadtherr</h1>
+
   <h2>Aerospace Engineering Student</h2>
 
   <p>
     Designing, building, and testing aerospace systems through hands-on
     engineering, experimentation, and problem solving.
   </p>
+
 </header>
 
+
 <section id="about">
+
   <h2 class="section-title">About Me</h2>
 
   <p class="about">
@@ -204,95 +244,210 @@
     allow me to take ideas from initial design through fabrication,
     integration, and physical testing.
   </p>
+
 </section>
 
+
 <section id="projects">
+
   <h2 class="section-title">Featured Projects</h2>
 
   <div class="projects">
 
-    <div class="project">
-      <h3>DIY Low-Speed Wind Tunnel</h3>
-      <div class="tags">
-        Mechanical Design • Fabrication • Testing • Flow Visualization
+
+    <!-- WIND TUNNEL -->
+
+    <div class="project featured">
+
+      <img
+        class="project-image"
+        src="Images/Wind%20Tunnel/IMG_3387.jpg"
+        alt="DIY low-speed wind tunnel"
+      >
+
+      <div class="project-content">
+
+        <h3>DIY Low-Speed Wind Tunnel</h3>
+
+        <div class="tags">
+          Mechanical Design • Fabrication • Testing • Flow Visualization
+        </div>
+
+        <p>
+          Designed and built a modular low-speed wind tunnel to study
+          external aerodynamics. Developed flow-conditioning and
+          smoke-visualization systems while balancing aerodynamic
+          performance, manufacturability, and cost.
+        </p>
+
+        <a href="#">View Project →</a>
+
       </div>
 
-      <p>
-        Designed and built a modular low-speed wind tunnel to study external
-        aerodynamics. Developed flow-conditioning and smoke-visualization
-        systems while balancing performance, manufacturability, and cost.
-      </p>
-
-      <a href="#">View Project →</a>
     </div>
+
+
+    <!-- UAV RESEARCH -->
 
     <div class="project">
-      <h3>Unmanned Aerial Vehicle Research</h3>
-      <div class="tags">
-        CAD • Hardware Integration • 3D Printing • Testing
+
+      <img
+        class="project-image"
+        src="Images/UAv%20Research/MDR%20drone%20with%20mount.png"
+        alt="UAV research platform with mechanical mount"
+      >
+
+      <div class="project-content">
+
+        <h3>Unmanned Aerial Vehicle Research</h3>
+
+        <div class="tags">
+          CAD • Hardware Integration • 3D Printing • Testing
+        </div>
+
+        <p>
+          Contributing to the development of a scalable UAV research
+          platform through mechanical design, 3D printing, component
+          selection, hardware integration, soldering, wiring, and physical
+          testing.
+        </p>
+
+        <a href="#">View Project →</a>
+
       </div>
 
-      <p>
-        Contributing to the development of a scalable UAV research platform.
-        Designed, fabricated, and tested components and built a subsystem
-        enabling controlled motion through mechanical and electrical
-        integration.
-      </p>
-
-      <a href="#">View Project →</a>
     </div>
+
+
+    <!-- LANDING GEAR -->
 
     <div class="project">
-      <h3>Aztec Aerospace Design Build Fly</h3>
-      <div class="tags">
-        Aircraft Design • SolidWorks • XFLR5 • Propulsion
+
+      <img
+        class="project-image"
+        src="Images/Landing%20gear/Landing%20gear%20assembly.png"
+        alt="Retractable UAV landing gear assembly designed in SolidWorks"
+      >
+
+      <div class="project-content">
+
+        <h3>Retractable UAV Landing Gear</h3>
+
+        <div class="tags">
+          SolidWorks • Mechanical Design • Mechanisms • Engineering Drawings
+        </div>
+
+        <p>
+          Designed and modeled a retractable UAV landing gear mechanism
+          incorporating a linear actuator, linkage-driven retraction system,
+          shock-absorbing strut, and pinned mechanical joints. The final
+          design included custom components, off-the-shelf hardware,
+          engineering drawings, a BOM, and exploded assembly views.
+        </p>
+
+        <a href="#">View Project →</a>
+
       </div>
 
-      <p>
-        Evaluating airfoils, propeller configurations, and motor performance
-        to support the development of an efficient competition aircraft.
-      </p>
-
-      <a href="#">View Project →</a>
     </div>
+
+
+    <!-- AAD -->
 
     <div class="project">
-      <h3>Rocket Design and Launch</h3>
-      <div class="tags">
-        Propulsion • SolidWorks • Aerospace Systems
+
+      <img
+        class="project-image"
+        src="Images/AAD/Propulsions%20thrust%20test%20stand.jpg"
+        alt="Aztec Aerospace propulsion thrust test stand"
+      >
+
+      <div class="project-content">
+
+        <h3>Aztec Aerospace Design Build Fly</h3>
+
+        <div class="tags">
+          Aircraft Design • SolidWorks • XFLR5 • Propulsion
+        </div>
+
+        <p>
+          Evaluating airfoils, propeller configurations, motor performance,
+          and propulsion characteristics to support development of an
+          efficient competition aircraft.
+        </p>
+
+        <a href="#">View Project →</a>
+
       </div>
 
-      <p>
-        Supporting rocket propulsion development through CAD modeling and
-        propulsion research as part of SDSU's Rocket Design and Launch Team.
-      </p>
-
-      <a href="#">View Project →</a>
     </div>
+
+
+    <!-- ROCKET -->
+
+    <div class="project">
+
+      <img
+        class="project-image"
+        src="Images/Rocket%20Project/IMG_3468.jpg"
+        alt="SDSU Rocket Design and Launch Team rocket"
+      >
+
+      <div class="project-content">
+
+        <h3>Rocket Design and Launch</h3>
+
+        <div class="tags">
+          Propulsion • SolidWorks • Aerospace Systems
+        </div>
+
+        <p>
+          Supporting rocket propulsion development through CAD modeling
+          of engine components and propulsion research as part of SDSU's
+          Rocket Design and Launch Team.
+        </p>
+
+        <a href="#">View Project →</a>
+
+      </div>
+
+    </div>
+
 
   </div>
+
 </section>
 
+
 <section id="skills">
+
   <h2 class="section-title">Engineering Skills</h2>
 
   <div class="skills">
+
     <div class="skill">SolidWorks</div>
+    <div class="skill">CAD Modeling</div>
     <div class="skill">MATLAB</div>
     <div class="skill">Python</div>
     <div class="skill">XFLR5</div>
-    <div class="skill">CAD Modeling</div>
+    <div class="skill">eCalc</div>
     <div class="skill">3D Printing</div>
     <div class="skill">Soldering</div>
     <div class="skill">Hardware Integration</div>
     <div class="skill">Prototype Testing</div>
     <div class="skill">Component Selection</div>
+    <div class="skill">Systems Engineering</div>
     <div class="skill">Data Analysis</div>
+    <div class="skill">Engineering Drawings</div>
     <div class="skill">Technical Documentation</div>
+
   </div>
+
 </section>
 
+
 <section id="contact" class="contact">
+
   <h2>Let's Connect</h2>
 
   <p>
@@ -301,15 +456,25 @@
 
   <br>
 
-  <a href="mailto:ryanstadtherr@gmail.com">Email</a>
+  <a href="mailto:ryanstadtherr@gmail.com">
+    Email
+  </a>
 
-  <a href="https://www.linkedin.com/in/ryan-stadtherr">
+  <a
+    href="https://www.linkedin.com/in/ryan-stadtherr"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     LinkedIn
   </a>
+
 </section>
 
+
 <footer>
+
   © 2026 Ryan Stadtherr | Aerospace Engineering Portfolio
+
 </footer>
 
 </body>
